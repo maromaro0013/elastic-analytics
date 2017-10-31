@@ -46,3 +46,6 @@ end
 
 # enviroment setting
 gem 'dotenv-rails'
+
+# Elasticsearch
+gem 'elasticsearch', '~> 5.0.4'
