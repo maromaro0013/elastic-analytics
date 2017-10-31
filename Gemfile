@@ -49,3 +49,4 @@ gem 'dotenv-rails'
 
 # Elasticsearch
 gem 'elasticsearch', '~> 5.0.4'
+gem 'elasticsearch-extensions'
