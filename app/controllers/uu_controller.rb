@@ -31,7 +31,7 @@ class UuController < ApplicationController
         aggs_cookie: {
           terms: {
             field: "cookie.keyword",
-            size: 100000
+            size: 1000000
           }
         }
       }
