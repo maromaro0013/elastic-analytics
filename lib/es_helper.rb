@@ -19,9 +19,9 @@ class EsHelper
     return true
   end
 
-  def search(index, type, body)
+  def search(index, type, body, filter_path)
     begin
-      ret = client.search(index: index, type: type, body: body)
+      ret = client.search(index: index, type: type, body: body, filter_path: filter_path)
     rescue => e
       return e
     end

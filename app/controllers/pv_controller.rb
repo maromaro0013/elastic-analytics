@@ -25,7 +25,7 @@ class PvController < ApplicationController
       }
     }
 
-    ret = esh.search("axs_#{params[:client_id]}", 'access_log', body)
+    ret = esh.search("axs_#{params[:client_id]}", 'access_log', body, 'hits.total')
     unless ret.kind_of? Hash
       render :json => { result: nil, err: ret.to_s }.to_json
     else
