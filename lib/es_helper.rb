@@ -6,7 +6,9 @@ class EsHelper
   end
 
   def initClient
-    @client = Elasticsearch::Client.new(log: true, logger: Logger.new("log/Elasticsearch.log"), host: ENV["ELASTICSEARCH_HOST"])
+    hosts = [ENV["ELASTICSEARCH_HOST00"], ENV["ELASTICSEARCH_HOST01"], ENV["ELASTICSEARCH_HOST02"]]
+    @client = Elasticsearch::Client.new(log: true, logger: Logger.new("log/Elasticsearch.log"), hosts: hosts, randomize_hosts: true)
+    p @client.transport.hosts
   end
 
   def setDate(gte, lte)
