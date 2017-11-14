@@ -125,7 +125,7 @@ class IndexController < ApplicationController
             cookie: { type: "keyword" },
             dashboard_flg: { type: "long" },
             host: { type: "keyword" },
-            query: { type: "keyword" },
+            query_string: { type: "keyword" },
             referer: { type: "keyword" },
             request: { type: "keyword" },
             request_time: { type: "long" },
